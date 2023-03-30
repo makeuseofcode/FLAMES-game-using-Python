@@ -39,7 +39,7 @@ def tell_status():
             result = right + left
         else:
             result = result[: len(result) - 1]
-    Status_field.insert(10, result[0])
+    Status_field.insert(0, result[0])
 
 def clear_all():
     Person1_field.delete(0, END)
@@ -56,9 +56,9 @@ label1 = Label(root, text="Name 1: ", fg='#ffffff',bg='#A020F0', font=("arial",2
 label2 = Label(root, text="Name 2: ", fg='#ffffff',bg='#A020F0', font=("arial",20,"bold"), padx='20')
 label3 = Label(root, text="Relationship Status: ", fg='#ffffff', bg='#A020F0',font=("arial",20,"bold"), padx='20')
 
-label1.grid(row=1, column=0, sticky="E")
-label2.grid(row=2, column=0, sticky="E")
-label3.grid(row=4, column=0, sticky="E")
+label1.grid(row=1, column=0)
+label2.grid(row=2, column=0)
+label3.grid(row=4, column=0)
 
 Person1_field = Entry(root, font=("arial", 15, "bold"))
 Person2_field = Entry(root, font=("arial", 15, "bold"))
